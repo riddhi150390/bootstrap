@@ -35,6 +35,9 @@ jobs:
             ${{ runner.OS }}-node-v${{ env.NODE }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}
             ${{ runner.OS }}-node-v${{ env.NODE }}-
 
+      - name: Update npm
+        run: npm install -g npm@next-7
+
       - name: Install npm dependencies
         run: npm ci
 
