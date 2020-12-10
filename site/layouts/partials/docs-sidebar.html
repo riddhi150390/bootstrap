@@ -21,7 +21,6 @@
           {{ $group.title }}
         </button>
 
-        {{- if $group.pages }}
         <div class="collapse{{ if $is_active_group }} show{{ end }}" id="{{ $group_slug }}-collapse">
           <ul class="list-unstyled fw-normal pb-1 small">
             {{- range $doc := $group.pages -}}
@@ -32,7 +31,6 @@
             {{- end }}
           </ul>
         </div>
-        {{- end }}
       </li>
     {{- else }}
       <li class="my-3 mx-4 border-top"></li>
